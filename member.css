@@ -1,0 +1,271 @@
+/* HEADER */
+.padding-header{
+    padding-top: 10px;
+}
+
+.home-pad{
+    color: white;
+    margin: 1 auto;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-light);
+    padding: 10px;
+    border-radius: 1rem;
+    margin-bottom: 5px;
+}
+
+.home-pad div{
+    font-size: 20px;
+}
+
+.home-btn{
+    width: 100px;
+    aspect-ratio: 2/2;
+    border-radius: 50%;
+}
+
+.home-btn a{
+    transition: all .5s;
+}
+
+.home-btn:hover{
+    transition: all .5s;
+    scale: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.home-btn a img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+
+/* CUSTOM FLEXBOX */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* CUSTOM STYLES */
+.mt{
+    margin-top: 20px;
+}
+
+.mtl{
+    margin-top: 50px;
+}
+
+.py{
+    padding: 10px 0;
+}
+
+.px{
+    padding: 0 10px;
+}
+
+.pyl{
+    padding: 25px 0;
+}
+
+.pxl{
+    padding: 0 25px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-start{
+    text-align: left;
+}
+
+.text-end{
+    text-align: right;
+}
+
+/* BOX */
+.box{
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    display: inline-block;
+    cursor: pointer;
+}
+/* FOR HOVER SA NUMBER AND LOCATION */
+.box:hover{
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    display: inline-block;
+    cursor: pointer;
+    color:yellow;
+}
+
+
+.box:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* CARD STYLE */
+.info-card-full{
+    width: 100%;
+    color: var(--text-color-light);
+}
+
+.info-card-full .img-container{
+    width: 100%;
+    overflow: hidden;
+    border-radius: .75rem;
+    aspect-ratio: 12/8;
+}
+
+.info-card{
+    width: 48%;
+    color: var(--text-color-light);
+}
+
+.img-container{
+    width: 100%;
+    overflow: hidden;
+    border-radius: .75rem;
+    aspect-ratio: 8/11;
+}
+
+.img-container img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    object-position: center;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.img-container img:hover{
+    scale: 1.25;
+    rotate: 5deg;
+}
+
+/* CONTENT */
+.main-content{
+    margin: 0 auto;
+    background-color: #2c2c2c;
+    width: 700px;
+    max-width: 100%;
+    margin-top: 5px;
+    border-radius: 1rem;
+}
+
+.main-wrapper{
+    padding-top: 140px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+section{
+    padding-bottom: 10px !important;
+}
+
+.main-wrapper hr{
+    width: 75%;
+    margin: 20px auto;
+}
+
+.basic-information{
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.basic-info-icon{
+    width: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* COVER PHOTO */
+.cover-photo{
+    width: 700px;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+/* PROFILE */
+.profile-wrapper{
+    position: relative;
+}
+
+.profile-picture{
+    margin-top: 250px;
+    border: 5px solid rgba(255,255,255,1);
+    border-radius: 50%;
+    width: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+}
+
+/* BOTTOM SOCIALS */
+.social-center{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-color-light);
+}
+
+.fb-icon{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fb-icon:hover{
+    background-color: rgba(255,255,255, .05);
+}
+
+.fb-icon img{
+    width: 100%;
+    height: auto;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 786px){
+    .info-card{
+        width: 100%;
+    }
+
+    .info-card-full .img-container{
+        aspect-ratio: 8/11;
+    }
+
+    .home-pad{
+        width: 100%;
+    }
+}
