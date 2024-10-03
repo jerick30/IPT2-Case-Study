@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../member.css">
 </head>
-<body id="body" style="background-color:black";>
+<body id="body" class="dark-mode">
     <div class="padding-header"></div>
+    
+    <!-- Light/Dark Mode Toggle -->
+    <div class="mode-switch">
+        <label class="switch">
+            <input type="checkbox" id="toggle-mode">
+            <span class="slider"></span>
+        </label>
+        <p id="mode-label">Dark Mode</p>
+    </div>
+
     <section class="container">
         <div class="home-pad">
            <div class="home-btn"><a href="../index.html" title="HOME"><img src="../images/icons/home.svg" alt="Home"></a></div>
@@ -67,19 +77,19 @@
                     <div class="flex-wrapper mt">
                         <div class="info-card">
                             <div class="img-container">
-                                <img src="../images/gelo/league.jpg" alt="" onmouseenter="changebg('../images/gelo/league.jpg')" onmouseleave="removebg()">
+                                <img src="../images/brian/Falllout4-scaled.webp" alt="" onmouseenter="changebg('../images/brian/Falllout4-scaled.webp')" onmouseleave="removebg()">
                             </div>
                             <div>
-                                <p class="py text-center">League of Legends</p>
+                                <p class="py text-center">Fallout 4</p>
                             </div>
                         </div>
 
                         <div class="info-card">
                             <div class="img-container">
-                                <img src="../images/brian/ml.jpg" alt="ml" onmouseenter="changebg('../images/brian/ml.jpg')" onmouseleave="removebg()">
+                                <img src="../images/brian/terraria.png" alt="ml" onmouseenter="changebg('../images/brian/terraria.png')" onmouseleave="removebg()">
                             </div>
                             <div>
-                                <p class="py text-center">Mobile Legends</p>
+                                <p class="py text-center">Terraria</p>
                             </div>
                         </div>
                     </div>
@@ -90,27 +100,27 @@
                     <div class="flex-wrapper mt">
                         <div class="info-card">
                             <div class="img-container">
-                                <img src="../images/brian/jujutsu-kaisen.webp"  alt="" onmouseenter="changebg('../images/brian/jujutsu-kaisen.webp')" onmouseleave="removebg()">
+                                <img src="../images/brian/DN.jpg"  alt="" onmouseenter="changebg('../images/brian/DN.jpg')" onmouseleave="removebg()">
                             </div>
                             <div>
-                                <p class="py text-center">Jujutsu Kaisen</p>
+                                <p class="py text-center">Death Note</p>
                             </div>
                         </div>
                         <div class="info-card">
                             <div class="img-container">
-                                <img src="../images/brian/onepiece.avif" alt="" onmouseenter="changebg('../images/brian/onepiece.avif')" onmouseleave="removebg()">
+                                <img src="../images/brian/code-geass.jpg" alt="" onmouseenter="changebg('../images/brian/code-geass.jpg')" onmouseleave="removebg()">
                             </div>
                             <div>
-                                <p class="py text-center">One Piece</p>
+                                <p class="py text-center">Code Geass</p>
                             </div>
                         </div>
                     </div>
                     <div class="info-card-full">
                         <div class="img-container">
-                            <img src="../images/brian/Yourname.jpg" alt="" onmouseenter="changebg('../images/brian/Yourname.jpg')" onmouseleave="removebg()">
+                            <img src="../images/brian/PsychoPass.png" alt="" onmouseenter="changebg('../images/brian/PsychoPass.png')" onmouseleave="removebg()">
                         </div>
                         <div>
-                            <p class="py text-center">Your Name</p>
+                            <p class="py text-center">Psycho Pass</p>
                         </div>
                     </div>
                 </div>
@@ -129,6 +139,24 @@
         </div>
     </section>
 
-    <script src="../member.js"></script>
+    <!-- <script src="../member.js"></script> -->
+    <script>
+        // Toggle between Light and Dark mode
+        const toggleSwitch = document.getElementById('toggle-mode');
+        const body = document.getElementById('body');
+        const modeLabel = document.getElementById('mode-label');
+        
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                modeLabel.textContent = "Light Mode";
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                modeLabel.textContent = "Dark Mode";
+            }
+        });
+    </script>
 </body>
 </html>
