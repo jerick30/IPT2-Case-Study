@@ -1,35 +1,36 @@
 /*----------------------------------------------------*/
-/* Quote Loop
------------------------------------------------------- */
-
-function fade($ele) {
-    $ele.fadeIn(1000).delay(3000).fadeOut(1000, function() {
-        var $next = $(this).next('.quote');
-        fade($next.length > 0 ? $next : $(this).parent().children().first());
-   });
-}
-fade($('.quoteLoop > .quote').first());
-
-/*----------------------------------------------------*/
 /* Smooth Scrolling
 ------------------------------------------------------ */
 
-jQuery(document).ready(function($) {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
 
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
+		const target = document.querySelector(this.getAttribute('href'));
 
-	    var target = this.hash,
-	    $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
+		target.scrollIntoView({
+			behavior: 'smooth'
+		});
 	});
-  
 });
 
+// Back to Top button functionality
+const backToTopButton = document.getElementById('backToTop');
 
+// Show the button when scrolled down 100px
+window.onscroll = function() {
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+		backToTopButton.style.display = "block";
+	} else {
+		backToTopButton.style.display = "none";
+	}
+};
+
+// Scroll to top when the button is clicked
+backToTopButton.addEventListener('click', function() {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth'
+	});
+});
 TweenMax.staggerFrom(".heading", 0.8, {opacity: 0, y: 20, delay: 0.2}, 0.4);
