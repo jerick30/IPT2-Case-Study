@@ -7,8 +7,18 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../member.css">
 </head>
-<body id="body" style="background-color:black";>
+<body id="body" class="dark-mode">
     <div class="padding-header"></div>
+    
+    <!-- Light/Dark Mode Toggle -->
+    <div class="mode-switch">
+        <label class="switch">
+            <input type="checkbox" id="toggle-mode">
+            <span class="slider"></span>
+        </label>
+        <p id="mode-label">Dark Mode</p>
+    </div>
+
     <section class="container">
         <div class="home-pad">
            <div class="home-btn"><a href="../index.html" title="HOME"><img src="../images/icons/home.svg" alt="Home"></a></div>
@@ -129,6 +139,24 @@
         </div>
     </section>
 
-    <script src="../member.js"></script>
+    <!-- <script src="../member.js"></script> -->
+    <script>
+        // Toggle between Light and Dark mode
+        const toggleSwitch = document.getElementById('toggle-mode');
+        const body = document.getElementById('body');
+        const modeLabel = document.getElementById('mode-label');
+        
+        toggleSwitch.addEventListener('change', () => {
+            if (toggleSwitch.checked) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                modeLabel.textContent = "Light Mode";
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                modeLabel.textContent = "Dark Mode";
+            }
+        });
+    </script>
 </body>
 </html>

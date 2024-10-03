@@ -21,3 +21,4 @@ function removebg(){
     img.style.cursor = '';
     img.style.backgroundColor = '#000000'
 }
+
