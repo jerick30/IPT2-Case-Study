@@ -1,4 +1,6 @@
+/* Font Families */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&family=Mina:wght@700&family=Teko:wght@700");
 
 /* Base Styles
 ********************************************************************* */
@@ -220,6 +222,7 @@ a:hover {
     border: none;
     border-radius: 5px;
     font-size: 15px;
+	font-family: "Figtree";
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -271,6 +274,7 @@ header {
 	font-size: 65px;
 	font-weight: 300;
 	text-transform: uppercase;
+	font-family: "Mina";
 	line-height: 0.85;
 	margin-bottom: 28px;
 	margin: 0;
@@ -397,10 +401,57 @@ transform:translate(0, 10px) rotate(45deg);
 opacity: 0;
 }
 }
+/* MOUSE TRAIL */
+.star {
+    transform-style: preserve-3d;
+    position: absolute;
+    z-index: 1000; /* Ensure stars appear above other content */
+}
+.star:before {
+    content: '\2726'; /* Unicode star symbol */
+    color: inherit;
+    filter: drop-shadow(0 0 0.5em white);
+    text-shadow: 0 0 0.8em #fff5;
+}
+
+/* Mute/Unmute Button */
+#muteButton {
+    position: absolute;
+    top: 50px;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.4s ease-out;
+    opacity: 0.8;
+}
+
+#muteButton img {
+    width: 80%;
+    height: 80%;
+    transition: transform 0.3s ease;
+}
+
+#muteButton:hover {
+    opacity: 0.8;
+}
+
+#muteButton.fade {
+    opacity: 0.2;
+}
+
 /* About Section */
 #about {
     padding: 80px 0;
     background-color: #f9f9f9;
+}
+
+#about h1 {
+	font-family: "Teko";
 }
 
 .about-section {
@@ -469,6 +520,9 @@ opacity: 0;
 	padding: 100px 0 100px 0;
 	background-color: #F5F5F5;
 }
+#skills h1 {
+	font-family: "Teko";
+}
 .progressBar {
 	margin-bottom: 26px;
 	margin-bottom: 1.66em;
@@ -532,10 +586,15 @@ opacity: 0;
 	padding: 100px 0 100px 0;
 }
 
+#hobbies h1 {
+	font-family: "Teko";
+	font-size: 3.5rem;
+	color: #2C5364;
+}
+
 .image {
 	background-color: #5a5a5a;
 	width: 100%;
-	/* height: auto; */
 	margin-left: auto;
 	margin-right: auto;
 	transition: .5s;
@@ -547,6 +606,13 @@ opacity: 0;
 	transition: .3s;
 }
 
+#romantic,
+#frieren,
+#monhun {
+	width: 170%;
+	border-radius: 10px;
+}
+
 .centered-row {
 	display: flex;
 	justify-content: space-around;
@@ -556,11 +622,13 @@ opacity: 0;
 .centered img {
 	display: block;
 	margin: 0 auto;
+	border-radius: 10px;
 }
   
 .centered p {
 	margin-top: 10px;
-	font-size: 1.2em;
+	font-size: 2rem;
+	font-family: "Figtree";
 	color: #333;
 }  
 
@@ -574,6 +642,9 @@ opacity: 0;
 ********************************************************************* */
 #contact {
 	padding: 100px 0 100px 0;
+}
+#contact h1 {
+	font-family: "Teko";
 }
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
 	height: 38px;
@@ -612,6 +683,9 @@ input[type="submit"]:hover {
 	text-decoration: none;
 }
 /* Footer */
+footer {
+	font-family: "Figtree";
+}
 .social-center {
     text-align: center;
     margin: 20px 0;

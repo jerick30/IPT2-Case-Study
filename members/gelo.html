@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gelo</title>
     <link rel="stylesheet" href="../members/gelo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fontawesome.com/icons/film?f=classic&s=solid">
 
@@ -17,6 +18,9 @@
 
 <!-- Header Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <button id="muteButton">
+    <img src="../images/gelo/mute-dark.png" alt="Mute Icon">
+  </button>
 
   <header id="header">
     <div class="title">
@@ -109,8 +113,8 @@
     <div class="separator"></div>
     <div class="row centered-row">
       <div class="three columns centered">
-        <img src="../images/gelo/Dr. Romantic.webp" width="300px" class="image" alt="Dr. Romantic" />
-        <p>Dr. Romantic</p>
+        <img src="../images/gelo/Dr. Romantic.webp" width="300px" class="image" id="romantic" alt="Dr. Romantic" />
+        <p style="width: 170%;">Dr. Romantic</p>
       </div>
       <div class="three columns centered">
         <img src="../images/gelo/Flower of Evil.jpg" class="image" alt="Flower of Evil" />
@@ -127,8 +131,8 @@
         <p>Apothecary Diaries</p>
       </div>
       <div class="three columns centered">
-        <img src="../images/gelo/frieren.png" class="image" alt="Frieren" />
-        <p>Frieren: Beyond Journey's End</p>
+        <img src="../images/gelo/frieren.png" class="image" id="frieren" alt="Frieren" />
+        <p style="width: 170%;">Frieren: Beyond Journey's End</p>
       </div>
     </div>
 
@@ -137,8 +141,8 @@
     <div class="separator"></div>
     <div class="row centered-row" style="margin-top: 30px;">
       <div class="three columns centered">
-        <img src="../images/gelo/monhun.jpg" class="image" alt="Monhun" />
-        <p>Monster Hunter</p>
+        <img src="../images/gelo/monhun.jpg" class="image" id="monhun" alt="Monhun" />
+        <p style="width: 170%;">Monster Hunter</p>
       </div>
       <div class="three columns centered">
         <img src="../images/gelo/valorant.jpg" class="image" alt="Valorant" />
@@ -159,7 +163,7 @@
   
   <section id="contact">
     <div class="container">
-      <h1>Contact</h1>
+      <h1>Contact Me!</h1>
       <div class="block"></div>
       <form>
         <div class="row">
@@ -195,6 +199,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- BG Audio -->
+    <audio id="bgAudio" autoplay loop>
+      <source src="../members/Song of the Ancients.mp3" type="audio/mp3"> 
+      Your browser does not support the audio element.
+    </audio>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">Back to Top</button>
